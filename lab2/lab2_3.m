@@ -1,0 +1,14 @@
+k   = 5
+T   = 2
+T1  = 3
+T2  = 1.3
+ksi = 0.2
+
+w7 =   tf([k], [T.^2  2*ksi*T    1])
+w7_2 = tf([2*k], [T.^2  2*ksi*T  1])
+
+step(w7)
+grid on
+hold on
+step(w7_2)
+grid on
